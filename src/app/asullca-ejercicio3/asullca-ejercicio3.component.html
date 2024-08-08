@@ -1,0 +1,11 @@
+<form (submit)="checkDNI($event)">
+    <div class="form-group">
+      <label for="birthYear">Año de nacimiento:</label>
+      <input type="number" id="birthYear" name="birthYear" (input)="onInput($event)" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Verificar</button>
+  </form>
+  
+  <div *ngIf="result !== null" class="mt-3">
+    <p>{{ resultMessage }}</p>
+  </div>
